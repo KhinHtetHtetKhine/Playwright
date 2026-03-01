@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playwright Todo App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Todo App</h1>
+        <p>Local app for Playwright end-to-end testing.</p>
+      </header>
+
+      <section class="panel">
+        <form data-testid="todo-form" id="todo-form">
+          <label class="visually-hidden" for="todo-input">Add task</label>
+          <input
+            data-testid="todo-input"
+            id="todo-input"
+            name="todo"
+            type="text"
+            maxlength="100"
+            placeholder="Add a task"
+            autocomplete="off"
+          />
+          <button data-testid="add-button" type="submit">Add</button>
+        </form>
+
+        <p data-testid="error" id="error" class="error" aria-live="polite"></p>
+
+        <ul data-testid="todo-list" id="todo-list" class="todo-list"></ul>
+        <p data-testid="empty-state" id="empty-state" class="empty">No tasks yet.</p>
+      </section>
+    </main>
+
+    <template id="todo-item-template">
+      <li class="todo-item" data-testid="todo-item">
+        <label>
+          <input data-testid="toggle" type="checkbox" />
+          <span data-testid="todo-text"></span>
+        </label>
+        <button data-testid="delete" class="delete" type="button">Delete</button>
+      </li>
+    </template>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
