@@ -1,0 +1,16 @@
+{
+  "name": "playwright-test-suite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "typescript": "^5.8.2",
+    "@types/node": "^22.13.10"
+  }
+}
